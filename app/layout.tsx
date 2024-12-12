@@ -7,7 +7,7 @@ import { Toaster } from '@/components/ui/toaster';
 const jetbrainsMono = JetBrains_Mono({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'Blink - Solana SPL Token Presale Platform',
+  title: 'Pre-X - Solana SPL Token Presale Platform',
   description: 'Create and manage Solana SPL token presales with ease',
 };
 
