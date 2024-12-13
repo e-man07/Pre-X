@@ -10,9 +10,9 @@ import { Footer } from '@/components/footer';
 
 export default function Home() {
   return (
-    <>
+    <div className="overflow-x-hidden">
       <Header />
-      <main className="min-h-screen bg-black text-green-400">
+      <main className="min-h-screen bg-black text-green-400 overflow-x-hidden">
         <div className="container mx-auto px-4 py-12">
           <Terminal />
           <Features />
@@ -24,6 +24,6 @@ export default function Home() {
         </div>
       </main>
       <Footer />
-    </>
+      </div>
   );
 }

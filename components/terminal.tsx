@@ -1,8 +1,14 @@
 "use client"
 
+import { Inter } from 'next/font/google';
 import { useState, useEffect } from 'react';
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
+
+const inter = Inter({
+  subsets: ['latin'],
+  display: 'swap',
+});
 
 export function Terminal() {
   const [text, setText] = useState('');
@@ -52,7 +58,7 @@ export function Terminal() {
           setTimeout(() => {
             index = 0;
             setCurrentTextIndex((prev) => (prev + 1) % terminalTexts.length);
-          }, 3000);
+          }, 1000);
         }
       }, 50);
 
@@ -67,7 +73,7 @@ export function Terminal() {
   }, [currentTextIndex]);
 
   return (
-    <div className="py-20 text-center">
+    <div className={`py-20 text-center ${inter.className}`}>
       <h1 className="text-4xl font-bold mb-6 transition-all duration-500">
         {terminalTexts[currentTextIndex].title}
       </h1>
